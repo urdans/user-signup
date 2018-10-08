@@ -1,0 +1,18 @@
+{% extends "main_layout.html" %}
+
+{% block content%}
+<div style="background-image: url('/static/mountain.jpg'); background-size: cover; height: 1024px;">
+    <hr>
+    <h1 style="margin: auto">{{message}}</h1>
+    <hr>
+    <br><br>
+    {% if users %}
+    <h4>List of actual registered users:</h2>
+        <ol>
+            {% for user in users %}
+            <li>{{user}}</li>
+            {% endfor %}
+        </ol>
+        {% endif %}
+</div>
+{% endblock %}
